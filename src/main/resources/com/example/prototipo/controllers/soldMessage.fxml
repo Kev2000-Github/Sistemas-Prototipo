@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane prefHeight="150.0" prefWidth="277.0" styleClass="backgroundTheme" stylesheets="@../stylesheet.css" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototipo.controllers.SoldMessageController">
+   <graphic>
+      <AnchorPane prefHeight="183.0" prefWidth="270.0">
+         <children>
+            <Pane layoutX="-1.0" prefHeight="153.0" prefWidth="252.0">
+               <children>
+                  <Label layoutX="44.0" layoutY="83.0" text="VENTA COMPLETADA" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CHECK" layoutX="114.0" layoutY="65.0" size="60" />
+                  <Button fx:id="closeButton" layoutX="99.0" layoutY="126.0" mnemonicParsing="false" onAction="#onOK" style="-fx-font-size: 14;" styleClass="buttonTheme" stylesheets="@../stylesheet.css" text="Entendido" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </graphic>
+</DialogPane>

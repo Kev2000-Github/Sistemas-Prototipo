@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="943.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototipo.controllers.LoginController">
+   <children>
+      <BorderPane layoutX="-11.0" layoutY="-11.0" prefHeight="543.0" prefWidth="961.0">
+         <left>
+            <VBox prefHeight="234.0" prefWidth="377.0" style="-fx-background-color: #373737;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="545.0" prefWidth="377.0">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="XING" layoutX="130.0" layoutY="233.0" size="150" />
+                        <Label layoutX="43.0" layoutY="264.0" text="A N K A R A" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="52.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="90.0" layoutY="326.0" text="SYSTEM" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="52.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children></VBox>
+         </left>
+         <center>
+            <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="597.0" prefWidth="584.0" style="-fx-background-color: #484848;">
+                     <children>
+                        <TextField fx:id="usernameField" layoutX="69.0" layoutY="179.0" prefHeight="19.0" prefWidth="383.0" promptText="Username" styleClass="input" stylesheets="@stylesheet.css" />
+                        <TextField fx:id="passwordField" layoutX="67.0" layoutY="276.0" prefHeight="21.0" prefWidth="387.0" promptText="Contraseña" styleClass="input" stylesheets="@stylesheet.css" />
+                        <Button layoutX="160.0" layoutY="363.0" mnemonicParsing="false" onAction="#onLogin" prefHeight="42.0" prefWidth="202.0" styleClass="buttonTheme" stylesheets="@stylesheet.css" text="ENTRAR" />
+                        <Label layoutX="74.0" layoutY="105.0" style="-fx-text-fill: #fff; -fx-font-size: 28; -fx-font-weight: bold;" text="INGRESAR" />
+                        <Button fx:id="helpButton" layoutX="222.0" layoutY="113.0" mnemonicParsing="false" text="?" />
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="943.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototipo.controllers.ReportController">
+   <children>
+      <BorderPane layoutX="-11.0" layoutY="-11.0" prefHeight="543.0" prefWidth="961.0">
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="backgroundTheme" stylesheets="@stylesheet.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="-11.0" layoutY="36.0" prefHeight="127.0" prefWidth="683.0" styleClass="floatingBackground">
+                     <children>
+                        <Label layoutX="43.0" layoutY="71.0" text="REPORTES">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <StackPane layoutX="7.0" layoutY="170.0" prefHeight="366.0" prefWidth="660.0">
+                     <children>
+                        <GridPane fx:id="pnInventario" prefHeight="366.0" prefWidth="631.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="177.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="355.0" minHeight="10.0" prefHeight="301.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TableView fx:id="inventoryTable" prefHeight="311.0" prefWidth="625.0" GridPane.rowIndex="1">
+                                 <columns>
+                                    <TableColumn fx:id="inventoryFecha" prefWidth="101.0" text="FECHA" />
+                                    <TableColumn fx:id="inventoryCodigo" prefWidth="94.0" text="CODIGO" />
+                                    <TableColumn fx:id="inventoryNombre" prefWidth="213.66668701171875" text="NOMBRE" />
+                                    <TableColumn fx:id="inventoryMovimiento" prefWidth="123.0" text="MOVIMIENTO" />
+                                    <TableColumn fx:id="inventoryCantidad" minWidth="0.0" prefWidth="127.0" text="CANTIDAD" />
+                                 </columns>
+                              </TableView>
+                              <Pane prefHeight="25.0" prefWidth="660.0" styleClass="backgroundTheme">
+                                 <children>
+                                    <Label layoutX="9.0" layoutY="15.0" text="Desde" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="inventoryFrom" layoutX="50.0" layoutY="10.0" onAction="#onEditDateInventory" />
+                                    <Label layoutX="318.0" layoutY="15.0" text="Hasta" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="inventoryTo" layoutX="359.0" layoutY="11.0" onAction="#onEditDateInventory" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </GridPane>
+                        <GridPane fx:id="pnVentas" prefHeight="383.0" prefWidth="635.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="177.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="355.0" minHeight="10.0" prefHeight="301.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TableView fx:id="saleTable" prefHeight="301.0" prefWidth="631.0" GridPane.rowIndex="1">
+                                 <columns>
+                                    <TableColumn fx:id="saleFecha" prefWidth="101.0" text="FECHA" />
+                                    <TableColumn fx:id="saleHora" prefWidth="89.0" text="HORA" />
+                                    <TableColumn fx:id="saleCodigo" prefWidth="131.0" text="CODIGO VENTA" />
+                                    <TableColumn fx:id="saleCliente" prefWidth="211.0" text="CLIENTE" />
+                                    <TableColumn fx:id="saleMonto" prefWidth="234.0" text="MONTO" />
+                                 </columns>
+                              </TableView>
+                              <Pane prefHeight="25.0" prefWidth="660.0" styleClass="backgroundTheme">
+                                 <children>
+                                    <Label layoutX="9.0" layoutY="15.0" text="Desde" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="saleFrom" layoutX="50.0" layoutY="10.0" onAction="#onEditDate" />
+                                    <Label layoutX="318.0" layoutY="15.0" text="Hasta" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="saleTo" layoutX="359.0" layoutY="11.0" onAction="#onEditDate" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </StackPane>
+               </children>
+            </Pane>
+         </center>
+         <left>
+            <VBox prefHeight="543.0" prefWidth="288.0" styleClass="darkBackgroundTheme" stylesheets="@stylesheet.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="129.0" prefWidth="288.0">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="XING" layoutX="51.0" layoutY="88.0" size="40" />
+                        <Label layoutX="93.0" layoutY="55.0" text="A N K A R A" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#toReportVenta" prefHeight="78.0" prefWidth="283.0" text="REPORTE VENTAS" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BOOK" size="25" wrappingWidth="21.190494537353516" />
+                     </graphic>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="darkBackgroundTheme" />
+                        <String fx:value="buttonHover" />
+                     </styleClass>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#toReportInventario" prefHeight="78.0" prefWidth="283.0" text="REPORTE INVENTARIO" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="ARCHIVE" size="25" wrappingWidth="21.190494537353516" />
+                     </graphic>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="darkBackgroundTheme" />
+                        <String fx:value="buttonHover" />
+                     </styleClass>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#goBack" prefHeight="78.0" prefWidth="283.0" text="REGRESAR" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="25" wrappingWidth="21.190494537353516" />
+                     </graphic>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="darkBackgroundTheme" />
+                        <String fx:value="buttonHover" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

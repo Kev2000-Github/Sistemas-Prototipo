@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="943.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototipo.controllers.SaleController">
+   <children>
+      <BorderPane layoutX="-11.0" layoutY="-11.0" prefHeight="543.0" prefWidth="961.0">
+         <left>
+            <Pane prefHeight="494.0" prefWidth="643.0" styleClass="darkBackgroundTheme" stylesheets="@stylesheet.css" BorderPane.alignment="CENTER">
+               <children>
+                  <BorderPane layoutX="8.0" layoutY="8.0" prefHeight="539.0" prefWidth="638.0">
+                     <center>
+                        <Pane fx:id="catalogPane" prefHeight="419.0" prefWidth="638.0" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                  <Pane layoutX="10.0" layoutY="10.0" prefHeight="38.0" prefWidth="636.0" styleClass="backgroundTheme" stylesheets="@stylesheet.css">
+                     <children>
+                        <Button layoutX="1.0" layoutY="2.0" mnemonicParsing="false" onAction="#goBack" styleClass="buttonTheme" stylesheets="@stylesheet.css" text="ATRAS" />
+                        <TextField fx:id="searchBar" layoutX="333.0" layoutY="5.0" prefHeight="25.0" prefWidth="255.0" styleClass="standard-input" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" layoutX="600.0" layoutY="25.0" onMouseClicked="#handleSearchItem" size="16" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </left>
+         <right>
+            <Pane prefHeight="537.0" prefWidth="319.0" styleClass="floatingBackground" stylesheets="@stylesheet.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ListView fx:id="invoiceList" layoutX="9.0" layoutY="29.0" prefHeight="388.0" prefWidth="302.0" />
+                  <Pane layoutX="9.0" layoutY="416.0" prefHeight="49.0" prefWidth="303.0" style="-fx-border-width: 1 0 0 0; -fx-border-color: #373737;">
+                     <children>
+                        <Label layoutX="19.0" layoutY="8.0" style="-fx-font-weight: bold; -fx-font-size: 20;" text="Total" />
+                        <Label fx:id="lblTotal" alignment="CENTER_RIGHT" layoutX="198.0" layoutY="10.0" style="-fx-font-weight: bold; -fx-font-size: 20;" text="0.00" textAlignment="RIGHT" />
+                     </children>
+                  </Pane>
+                  <Button fx:id="sellButton" disable="true" layoutX="16.0" layoutY="475.0" mnemonicParsing="false" onAction="#onSellHandle" prefHeight="39.0" prefWidth="130.0" styleClass="buttonTheme" stylesheets="@stylesheet.css" text="VENDER" />
+                  <Button fx:id="clearButton" disable="true" layoutX="161.0" layoutY="475.0" mnemonicParsing="false" onAction="#onClearHandle" prefHeight="39.0" prefWidth="130.0" styleClass="buttonTheme" stylesheets="@stylesheet.css" text="LIMPIAR" />
+               </children>
+            </Pane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

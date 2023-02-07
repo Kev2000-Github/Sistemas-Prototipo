@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane prefHeight="200.0" prefWidth="269.0" styleClass="backgroundTheme" stylesheets="@../stylesheet.css" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototipo.controllers.WarnCredentialsMessageController">
+   <graphic>
+      <AnchorPane prefHeight="200.0" prefWidth="270.0">
+         <children>
+            <Pane layoutX="-1.0" prefHeight="200.0" prefWidth="269.0">
+               <children>
+                  <Label layoutX="38.0" layoutY="78.0" text="Credenciales Incorrectas" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="110.0" prefHeight="57.0" prefWidth="235.0" text="Por favor ingrese uno de los valores provistos en los tips de ayuda pasando el mouse por encima de los formularios" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="WARNING" layoutX="114.0" layoutY="65.0" size="60" />
+                  <Button fx:id="closeButton" layoutX="101.0" layoutY="176.0" mnemonicParsing="false" onAction="#onOK" style="-fx-font-size: 14;" styleClass="buttonTheme" stylesheets="@../stylesheet.css" text="Entendido" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </graphic>
+</DialogPane>

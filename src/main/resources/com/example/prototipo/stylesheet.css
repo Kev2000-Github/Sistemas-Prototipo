@@ -1,0 +1,106 @@
+.input{
+    -fx-font-size: 20;
+}
+
+.standard-input{
+    -fx-border-width: 0 0 0.5 0;
+    -fx-border-color: #fff;
+    -fx-background-color: transparent;
+    -fx-text-fill: #fff;
+}
+
+.buttonTheme{
+    -fx-background-color: #373737;
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-text-fill: #fff;
+}
+
+.buttonTheme:hover, .buttonHover:hover{
+    -fx-background-color: #5c5a5a;
+    -fx-cursor: hand;
+}
+
+.backgroundTheme{
+    -fx-background-color: #484848;
+}
+
+.darkBackgroundTheme{
+    -fx-background-color: #373737;
+}
+
+.floatingBackground{
+    -fx-background-color: #E9E7E7;
+}
+
+.iconButton{
+    -fx-cursor: hand;
+}
+
+/*
+    Change default table look
+*/
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-cell-size: 20;
+    -fx-background-color: #2D75E8;
+}
+.table-view .column-header .label{
+   -fx-text-fill: white;
+   -fx-font-weight: bold;
+   -fx-alignment: CENTER_LEFT;
+}
+.table-view .cell{
+  -fx-cell-size: 30;
+  -fx-alignment: center-left;
+  -fx-text-fill: #000000;
+  -fx-alignment: CENTER_LEFT;
+}
+.table-row-cell:selected {
+    -fx-background-color:  rgb(127, 172, 243);
+ }
+ .table-row-cell:selected .text {
+        -fx-fill : white ;
+ }
+ .table-view .scroll-bar:horizontal .track,
+ .table-view .scroll-bar:vertical .track{
+ 	-fx-background-color: transparent;
+ 	-fx-border-color:derive(  #2D75E8,80%);
+ 	-fx-background-radius: 2em;
+ 	-fx-border-radius:2em;
+ }
+ .table-view .scroll-bar:horizontal .thumb,
+ .table-view .scroll-bar:vertical .thumb {
+    -fx-background-color:derive( #2D75E8,90%);
+ 	-fx-background-insets: 2, 0, 0;
+ 	-fx-background-radius: 2em;
+ }
+
+ /*
+    Change invoice view table
+ */
+/*
+ .invoice .column-header,
+ .invoice .column-header-background .filler {
+     -fx-background-color: transparent;
+ }
+ .invoice .column-header .label{
+    -fx-text-fill: transparent;
+ }
+.invoice .table-cell{
+    -fx-background-color:  #373737;
+ }
+*/
+ .item{
+ -fx-cursor: hand;
+ -fx-background-color: #484848;
+ }
+
+ .item:hover{
+  -fx-background-color: #5c5a5a;
+ }
+
+ .list-cell{
+     -fx-font-size:20;
+ }
